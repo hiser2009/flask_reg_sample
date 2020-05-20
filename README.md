@@ -1,0 +1,1 @@
+This is a sample registration Python Flask App. Database connection used is PostGRESQL
