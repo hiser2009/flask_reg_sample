@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Please Register</title>
+<link href="../static/main.css" rel="stylesheet">
+
+<style>
+
+
+ body {
+    font-family: "Lucida Sans", sans-serif;
+
+    background-image: linear-gradient(#666699,#999966);
+}
+
+
+input[type=submit] {
+    width: 25%;
+    background-color: rgb(117, 211, 120);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+</style>
+    
+</head>
+<body>
+    <div>
+        <h1 style="color: black; font-size: 40px; text-align: center;">Subscribe to our Newsletter</h1>
+        <p style="color: black; text-decoration: underline; font-size: 20px;">Please fill out this form to receive the alert.</p>
+          <div class="message">
+            {{text | safe}}
+          </div>  
+          <form action="{{url_for('success')}}" method="POST">
+              <label for="fname", style="color: black; font-size: 20px;">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Enter Your First Name.." required>
+              <br>
+              <label for="lname", style="color: black;  font-size: 20px;">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Enter Your Last Name.." required>
+              <br>
+              <label for="ename", style="color: black;  font-size: 20px;">Email Address</label>
+              <input type="text" id="ename" name="emailaddress" placeholder="Enter Your Email Address.." required>
+              <br>
+              <label for="cname", style="color: black;  font-size: 20px;">Mobile Number</label>
+              <input type="text" id="cname" name="mobilenumber" placeholder="XXX-XXX-XXXX.." required>
+              <br>
+              <label for="county" style="color: black;  font-size: 20px;" >County You Live In</label>
+              <select id="county" name="county" required>
+                <option value="San Bernardino">San Bernardino</option>
+                <option value="Riverside">Riverside</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Orange">Orange</option>
+                <option value="San Diego">San Diego</option>
+              </select>
+              <br>
+              <br>
+              <fieldset id="group1">
+                <h1 style="color: black; font-size: 18px">Do you have trouble sleeping?</h1>
+                <label class="container2" style="color: black; ">Yes
+                  <input type="radio" checked="checked" name="group1" value="Yes" >
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container2" style="color: black;">No
+                  <input type="radio"  name="group1" value="No">
+                  <span class="checkmark"></span>
+                </label>
+                </fieldset>
+                <br>
+                <fieldset id="group2">
+                <h1 style="color: black; font-size: 18px">Do you suffer from depression?</h1>
+                <label class="container3" style="color: black;">Yes
+                  <input type="radio" checked="checked" name="group2" value="Yes">
+                  <span class="checkmark3"></span>
+                </label>
+                <label class="container3" style="color: black;">No
+                  <input type="radio" name="group2" value="No">
+                  <span class="checkmark3"></span>
+                </label>
+                </fieldset>
+                <br>
+                <fieldset id="group3">
+                <h1 style="color: black; font-size: 18px">Do you lack appetite?</h1>
+                <label class="container4" style="color: black;">Yes
+                  <input type="radio" checked="checked" name="group3" value="Yes">
+                  <span class="checkmark4"></span>
+                </label>
+                <label class="container4" style="color: black;">No
+                  <input type="radio"  name="group3" value="No">
+                  <span class="checkmark4"></span>
+                </label>
+                </fieldset>
+                <br>
+                <fieldset id="group4">
+                <h1 style="color: black; font-size: 18px">Do you have aches and pains in your body?</h1>
+                <label class="container5" style="color: black;">Yes
+                  <input type="radio" checked="checked" name="group4" value="Yes">
+                  <span class="checkmark5"></span>
+                </label>
+                <label class="container5" style="color: black;">No
+                  <input type="radio" name="group4" value="No">
+                  <span class="checkmark5"></span>
+                </label>
+                </fieldset>
+              </fieldset>
+              <br>
+              <div class="input" style="text-align:center;">
+                <input type="submit" value="Submit">
+              </div>
+              
+            </form>  
+            <br>
+            <div>
+              <p style="color: black; text-align: center;">By subscribing to the Hook Alert you agree to our <a href="#" style="color:dodgerblue"><strong>Terms & Privacy</strong></a>.</p>
+
+            </div>
+            
+    </div>
+
+</body>
+</html>
